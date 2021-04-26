@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import appImage from './assets/images/app-proposed-image.jpg';
+// import appImage from './assets/images/app-proposed-image.jpg';
 import TestAPI from './components/TestAPI'
 
 function App() {

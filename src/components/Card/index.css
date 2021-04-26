@@ -1,0 +1,39 @@
+.card-display {
+    width: 22rem;
+    margin: 2em;
+    background-color: #51c4d3;
+    position:relative;
+    display: flex;
+    flex-direction:column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 4px;
+}
+
+.card-display-dark {
+    width: 22rem;
+    margin: 2em;
+    background-color: #126e82;
+    position:relative;
+    display: flex;
+    flex-direction:column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 4px;
+}
+
+.image-display {
+    border: 1px solid #126e82;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: #71a0a5;
+}
+
+.displayFloat {
+    float: right;
+}

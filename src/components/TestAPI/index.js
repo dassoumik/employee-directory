@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import API from "../../util/API.js";
+import DisplayCards from "../Card";
+
 
 class TestAPI extends Component {
     state = {
       search: "",
-      results: ""
+      userName: "",
+      email: "",
+      phone: "",
+      DOB: "",
+      image: ""
     };
   
     // When this component mounts, search the Giphy API for pictures of kittens
@@ -13,9 +19,14 @@ class TestAPI extends Component {
     }
   
     getUsers = query => {
-      API.getRandomUsers(query)
-        .then(res => this.setState({ results: res.data.results[0].name.first }))
-        .catch(err => console.log(err));
+      const res = API.results;
+      {console.log(res.map(elements => elements.name));}
+         this.setState({ userName: res[0].name.first + " " + res[0].name.last,
+            email: res[0].email,
+            phone: res[0].phone,
+            DOB: res[0].dob.age,
+           image: res[0].picture.thumbnail});
+      console.log(res[0].email);     
     };
   
     handleInputChange = event => {
@@ -41,7 +52,13 @@ class TestAPI extends Component {
             handleInputChange={this.handleInputChange}
           />
           <ResultList results={this.state.results} /> */}
-          <h3>{[this.state.results]}</h3>
+          <DisplayCards 
+          name={[this.state.userName]}
+          email={[this.state.email]}
+          phone={[this.state.phone]}
+          DOB= {[this.state.DOB]}
+         image= {[this.state.image]}
+          ></DisplayCards>
           {/* <img src={this.state.results.pictures.thumbnail} alt="thumbnail user"/> */}
         </div>
       );

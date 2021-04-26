@@ -3,6 +3,14 @@
   "name": "employee-directory",
   "version": "0.1.0",
   "private": true,
+  "configurations": 
+    {
+        "name": "Chrome",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:3000",
+        "webRoot": "${workspaceRoot}/src"
+    },
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
