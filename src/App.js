@@ -8,6 +8,7 @@ import CardLayout from './components/CardLayout/index'
 function App() {
   return (
     <div className="App">
+      <input type="text" name="search" placeholder="Search..."></input>  
     <div className="grid">
       <CardLayout/>
     </div>
