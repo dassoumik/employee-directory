@@ -8,13 +8,13 @@ import CardLayout from './components/CardLayout/index'
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
-
+  const grid = "grid";
   return (
     <div className="App">
       <input type="text" name="search" placeholder="Search..." onChange={(event) => {
         setSearchTerm(event.target.value)
       }}></input>  
-    <div className="grid">
+    <div className={grid}>
       <CardLayout search={searchTerm}/>
     </div>
     </div>

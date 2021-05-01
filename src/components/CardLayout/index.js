@@ -5,11 +5,12 @@ import "../Box.css";
 
 function CardLayout(props) {
     const result = API.results;
+    const boxClass = "box box1";
 
     const carddata = (res, index) => {
         return(
 
-            <Card className="box box1" style={{backgroundColor: "cyan"}} key={index}>
+            <Card className={boxClass} style={{backgroundColor: "cyan"}} key={index}>
                 <div className="md-col-4 flex d-inline-flex imageDisp">
                 <img variant="top" src={res.picture.thumbnail} style={{borderRadius: "50%"}} alt="user"/>
                 </div>
@@ -25,7 +26,7 @@ function CardLayout(props) {
     }
 
     return (
-        <div className="App">
+        <div className="grid">
             {result.filter((val) => 
             {
             if (String(props.search) == "") {
