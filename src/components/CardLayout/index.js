@@ -1,9 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import API from "../../util/API.js";
 import {Card} from "react-bootstrap";
 import "../Box.css";
 
-function CardLayout() {
+function CardLayout(props) {
     const result = API.results;
 
     const carddata = (res, index) => {
@@ -26,7 +26,16 @@ function CardLayout() {
 
     return (
         <div className="App">
-            {result.map(carddata)}
+            {result.filter((val) => 
+            {
+            if (String(props.search) == "") {
+                return val;
+            } else if 
+             (val.name.first.toLowerCase().includes(String(props.search).toLowerCase()) ||
+              val.name.last.toLowerCase().includes(String(props.search).toLowerCase())) {
+                 return val;
+             } 
+            }).map(carddata)}
         </div>
     )
 }
